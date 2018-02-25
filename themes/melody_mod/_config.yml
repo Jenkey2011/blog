@@ -1,6 +1,6 @@
 # html lang
 # ---------------
-language: en
+language: default
 
 # Main menu navigation
 # ---------------
@@ -30,7 +30,10 @@ highlight_theme: default
 # ---------------
 #social:
   #icon_name: url
-
+social:
+  github: https://github.com/jenkey2011
+  weibo: https://weibo.com/747952150
+  
 # Algolia search
 # ---------------
 algolia_search:
@@ -45,10 +48,10 @@ algolia_search:
 # Local search
 # ---------------
 local_search:
-  enable: false
+  enable: true
   labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
+    input_placeholder: 请输入关键字
+    hits_empty: "未找到关于: \"${query}\" 的内容"
 
 # MathJax
 # ---------------
@@ -63,7 +66,7 @@ fireworks: false
 
 # Analysis
 # ---------------
-baidu_analytics: 
+baidu_analytics: 5b1f88a8b8504af6901cc5ae78130e0c
 
 google_analytics:
 
@@ -98,9 +101,9 @@ cdn:
 
 # Post info settings
 # ---------------
-avatar: 
+avatar: https://avatars3.githubusercontent.com/u/20010737?s=460&v=4
 
-top_img: true # false or url of img 
+top_img: http://api.dujin.org/bing/1920.php # false or url of img 
 
 post_meta:
   date_type: created # created or updated 
@@ -108,7 +111,7 @@ post_meta:
   tags: true
 
 wordcount:
-  enable: false
+  enable: true
 
 toc:
   enable: true
@@ -118,10 +121,13 @@ post_copyright:
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
-# QR_code:
-  # - itemlist:
-  #     img:
-  #     text:
+QR_code:
+  - itemlist:
+      img: ../../../../img/alipay.jpg
+      text: 支付宝
+  - itemlist:
+      img: ../../../../img/wechat.jpg
+      text: 微信
 
 # adv:
   # enable: false
@@ -133,9 +139,9 @@ addThis:
   enable: false
   #pubid: 
 
-# sharejs:
-  # enable: false
-  # disabled_sites: 
+sharejs:
+  enable: true
+  disabled_sites: 
 
 # Comments System
 # ---------------
@@ -144,9 +150,9 @@ disqus:
   #shortname: 
   #count: 
 
-# laibili:
-  # enable: false
-  # uid:
+laibili:
+  enable: true
+  uid: MTAyMC8zNDMzMC8xMDg2Nw==
 
 # gitment
   # enable: false
@@ -178,7 +184,7 @@ valine:
 
 # Footer Settings
 # ---------------
-since: 2013
+since: 2016
 
 ICP:
   enable: false
