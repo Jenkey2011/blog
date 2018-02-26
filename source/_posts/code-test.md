@@ -5,10 +5,12 @@ tags:
   - js
   - html
   - css
+categories: 
+  - 受到了开发建设
 ---
 
 ```js
-var x = 0
+2018.02.26
 function foo() {
   console.log(x)
 }
@@ -44,70 +46,9 @@ var x = 0
 function foo() {
   console.log(x)
 }
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
-var x = 0
-function foo() {
-  console.log(x)
-}
+/*
+
+*/
 ```
 
 # sdfs

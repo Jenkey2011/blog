@@ -14,12 +14,13 @@ block top_img
             time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]
           if (theme.post_meta.categories && page.categories.data.length > 0)
             if (theme.post_meta.date_type)
-              span.post-meta__separator |
-            each item, index in page.categories.data
-              i.fa.fa-inbox.post-meta__icon(aria-hidden="true")
-              a(href=url_for(item.path)).post-meta__categories #[=item.name]
-              if (index < page.categories.data.length - 1)
-                 i.fa.fa-angle-right(aria-hidden="true")
+              span.post-meta__separator 
+              //- span.post-meta__separator |
+            //- each item, index in page.categories.data
+            //-   i.fa.fa-inbox.post-meta__icon(aria-hidden="true")
+            //-   a(href=url_for(item.path)).post-meta__categories #[=item.name]
+            //-   if (index < page.categories.data.length - 1)
+            //-      i.fa.fa-angle-right(aria-hidden="true")
           if (theme.disqus.enable && theme.disqus.count)
             if (theme.post_meta.date_type || theme.post_meta.categories && page.categories.data.length > 0)
               span.post-meta__separator |

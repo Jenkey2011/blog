@@ -4,11 +4,32 @@ language: default
 
 # Main menu navigation
 # ---------------
+# menu:
+#   Home: /
+#   Archives: /archives
+#   Tags: /tags
+#   Categories: /categories
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
+  主页: /
+  文章: /archives
+  标签: /tags
+  归档: /categories
+# menu:
+#   - page: home
+#     directory: /
+#     show: 首页
+#   - page: archive
+#     directory: /archives
+#     show: 文章
+#   - page: tags
+#     directory: /tags
+#     show: 标签
+#   - page: categories
+#     directory: /Categories
+#     show: 归档
+#   - page: about
+#     directory: /about
+#     show: 关于
   #XXX: /xxx
 
 # Favicon
@@ -103,7 +124,7 @@ cdn:
 # ---------------
 avatar: https://avatars3.githubusercontent.com/u/20010737?s=460&v=4
 
-top_img: http://api.dujin.org/bing/1920.php # false or url of img 
+top_img: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture # false or url of img 
 
 post_meta:
   date_type: created # created or updated 

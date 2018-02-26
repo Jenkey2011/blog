@@ -1,6 +1,8 @@
 - var top_img = theme.top_img || config.top_img
 - var flag = top_img === true ? 'no-bg' : top_img
-nav#nav(style=`background-image: url(${top_img})` class=flag)
+nav#nav
+  #nav-bg(style=`background-image: url(${top_img})` class=flag)
+  //- img#bg-img(src=`${top_img}`)
   include ./header.pug
   #site-info
     #site-title= config.title
