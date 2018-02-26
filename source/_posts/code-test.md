@@ -10,7 +10,35 @@ categories:
 ---
 
 ```js
-2018.02.26
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
 function foo() {
   console.log(x)
 }
@@ -46,13 +74,30 @@ var x = 0
 function foo() {
   console.log(x)
 }
-/*
-
-*/
+var x = 0
+function foo() {
+  console.log(x)
+}
+var x = 0
+function foo() {
+  console.log(x)
+}
 ```
 
-# sdfs
+```html
+  <h1> HTML5  </h1>
+```
 
-## dfsd
+```css
+body {
+  background: #fff;
+}
+```
 
-#### dsfkds
+```ts
+function foo() {}
+var x = 0
+function foo() {
+  console.log(x)
+}
+```

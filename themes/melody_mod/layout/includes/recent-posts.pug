@@ -9,9 +9,9 @@ each article in page.posts.data
       - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date'
       time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(article[date_type], config.date_format)]
     for category in categories
-      a.category(href=url_for(category.path))= category.name
+        a.fa.fa-folder-open.category(href=url_for(category.path),aria-hidden="true")= category.name
     for tag in tags
-      a.category(href=url_for(tag.path))= tag.name
+      a.fa.fa-tag.tags(href=url_for(tag.path),aria-hidden="true")= tag.name
     .content!= article.excerpt
     a.more(href=url_for(link) + '#more')= _p('read_more')
       i.fa.fa-long-arrow-right(aria-hidden="true")
