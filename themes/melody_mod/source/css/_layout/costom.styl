@@ -42,24 +42,34 @@ figure
   position relative
 
 .recent-post-item
-  padding: 24px 32px 32px
+  padding: 24px 32px 63px
   box-shadow: 0 4px 8px 0 rgba(7,17,27,.05)
   border-radius: 8px
   transition: all .3s
+  .helpWarp
+    display: none
   .more
+    float: right
     background: none!important
     color: $light-black!important
     &:hover
       color: $pale-grey!important
       background: $light-blue!important
+  i.fa-list,i.fa-tag
+    margin-left: 2rem
+    margin-right: 0.2rem
   .category,.tags
     text-decoration: none
     color: $grey
-    margin-left: 1rem
+    margin-left: 0rem
     &:hover
       color: $light-blue
+  .category
+    margin-right: 0.5rem
   .tags
-    margin-left: 0.5rem
+    margin-right: 0.8rem
+    &:hover
+      text-decoration: underline
   .content
     margin-bottom 10px
   .article-title
@@ -121,4 +131,9 @@ figure.highlight
       table
         &::after
           content: value
-       
+#footer
+  .framework-info
+    a
+      color: $light-blue
+      &:hover
+        color:$blue
