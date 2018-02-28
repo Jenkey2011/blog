@@ -108,6 +108,7 @@ scripts:
 - /js/transition.js
 - /js/scroll.js
 - /js/head.js
+- /js/busuanzi.pure.mini.js
 
 # cdn for third-party library
 # ---------------
