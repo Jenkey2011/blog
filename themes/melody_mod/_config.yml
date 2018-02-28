@@ -35,7 +35,7 @@ menu:
 
 # Favicon
 # ---------------
-favicon: /favicon.ico
+favicon: /favicon.ico?v=wang
 
 # PWA
 # ---------------
