@@ -4,12 +4,12 @@ date: 2018-02-28 22:51:44
 tags:
 ---
 
-# 洗牌算法(shuffle)的 js 实现
+## 洗牌算法(shuffle)的 js 实现
 
 相信很多小伙伴在实际项目中都会遇到需要打乱数组的情况,获取一个新的打乱的数组,我们称之为——洗牌算法(shuffle)
 js 实现有多种方法
 
-## Fisher-Yates
+### Fisher-Yates
 
 [Fisher-Yates](http://en.wikipedia.org/wiki/Fisher-Yates_shuffle)应该是最经典的了，这里有一个该算法的[可视化实现](https://bost.ocks.org/mike/shuffle/)
 
@@ -30,7 +30,7 @@ function shuffle(arr) {
 }
 ```
 
-## 通用的 Shuffle
+### 通用的 Shuffle
 
 Fisher 算法要去除原数组中的元素，所以时间复杂度为 O(n2)，下面讲的方法原理是**每次从未处理的数组中随机取一个元素，然后把该元素放到数组的尾部，即数组的尾部放的就是已经处理过的元素**，这是一种原地打乱的算法，每个元素随机概率也相等，时间复杂度从 Fisher 算法的 O(n2)提升到了 O(n)
 具体步骤：
