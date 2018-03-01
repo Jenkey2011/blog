@@ -113,7 +113,8 @@
     &:before
       margin-right: 0.3rem
       color: $light-red
-      content: "\f02e"
+      // content: "\f02e"
+      content: "§"
       font: normal normal normal 14px / 1 FontAwesome
       font-size: 0.8rem
       transition: all 0.2s ease-out
@@ -126,7 +127,7 @@
   ol,
   ul
     margin-top: 0.4rem
-    padding: 0 0 0 0.8rem
+    padding: 0 0 0 0rem
     list-style: none
     counter-reset: li
 
@@ -138,35 +139,37 @@
       padding-left: 0.5rem
 
     li
-      position: relative
-      margin: 0.2rem 0
-      padding: 0.1rem 0.5rem 0.1rem 1.5rem
+      position: relative;
+      margin: 0.2rem 0;
+      padding: 0rem 0.5rem 0.1rem 0rem;
+      list-style-type: disc;
+      list-style-position: inside;
+      
+      // &:hover
+      //   &:before
+      //     transform: rotate(360deg)
 
-      &:hover
-        &:before
-          transform: rotate(360deg)
-
-      &:before
-        position: absolute
-        top: 0
-        left: 0
-        background: $light-blue
-        color: $white
-        cursor: pointer
-        transition: all 0.3s ease-out
+      // &:before
+      //   position: absolute
+      //   top: 0
+      //   left: 0
+      //   background: $light-blue
+      //   color: $white
+      //   cursor: pointer
+      //   transition: all 0.3s ease-out
 
   ol
     li
-      &:before
-        margin-top: 0.2rem
-        width: w = 1.2rem
-        height: h = w
-        border-radius: 0.5 * w
-        content: counter(li)
-        counter-increment: li
-        text-align: center
-        font-size: 0.6rem
-        line-height: h
+      // &:before
+      //   margin-top: 0.2rem
+      //   width: w = 1.2rem
+      //   height: h = w
+      //   border-radius: 0.5 * w
+      //   content: counter(li)
+      //   counter-increment: li
+      //   text-align: center
+      //   font-size: 0.6rem
+      //   line-height: h
 
   ul
     li
