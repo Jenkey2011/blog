@@ -119,7 +119,8 @@ figure.highlight
     &::after 
       position: absolute
       top: -1rem
-      left: 0.5rem
+      left: 0
+      right: 0
       padding: 2px 7px
       font-size: $code-font-size
       font-weight: bold
@@ -127,6 +128,15 @@ figure.highlight
       background: darken($code-background, 3%)
       content: 'Code'
       display: block
+      background: #21252b
+      color:#909295
+    td,tr
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    .gutter
+      width: 1rem
+    
   for key, value in $code-type-list
     &.{key}
       table
@@ -153,3 +163,6 @@ figure.highlight
     font-size: 13px;
     font-family: Consolas, Monaco, Menlo, Consolas, monospace;
     background: #f8f5ec;
+
+.fa-clipboard
+  z-index 2
