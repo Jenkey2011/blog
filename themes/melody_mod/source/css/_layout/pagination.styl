@@ -1,7 +1,25 @@
 #pagination
   overflow: hidden
   margin-top: 1rem
-
+  .prev-post,.next-post
+    a
+      color: $font-color  
+      font-size:18px
+      text-decoration: none
+      font-weight: bold
+      display: inline-block
+      &:hover
+        color:$blue
+  .prev-post
+    margin-left: 4px
+    a
+      &:hover
+        transform: translateX(-4px)
+  .next-post
+    margin-right: 4px
+    a
+      &:hover
+        transform: translateX(4px)
   .pagination
     text-align: center
 

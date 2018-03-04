@@ -78,7 +78,9 @@
     margin-right: 0.2rem
 
   &__tag-list
+    padding-top: 1rem
     margin-bottom: 0.5rem
+    border-top: 1px solid $grey
 
   &__tags
     margin-right: 0.4rem
@@ -127,7 +129,7 @@
   ol,
   ul
     margin-top: 0.4rem
-    padding: 0 0 0 0rem
+    padding: 0 0 0 1rem
     list-style: none
     counter-reset: li
 
@@ -177,17 +179,17 @@
         &:before
           border-color: $ruby
 
-      &:before
-        $w = 0.3rem
-        top: 10px
-        margin-left: 0.45rem
-        width: w = $w
-        height: h = w
-        border: 0.5 * w solid $light-blue
-        border-radius: w
-        background: $white
-        content: ""
-        line-height: h
+      // &:before
+      //   $w = 0.3rem
+      //   top: 10px
+      //   margin-left: 0.45rem
+      //   width: w = $w
+      //   height: h = w
+      //   border: 0.5 * w solid $light-blue
+      //   border-radius: w
+      //   background: $white
+      //   content: ""
+      //   line-height: h
 
 #post-content
   margin-bottom: 1rem
@@ -246,50 +248,56 @@ img
   position: relative
   margin-bottom: 1rem
   padding: 0.5rem 0.8rem
-  border: 1px solid $light-grey
+  border-top: 1px dashed $grey
   transition: box-shadow 0.3s ease-in-out
 
-  &:before
-    position: absolute
-    top: t = 0.5rem
-    right: t
-    width: w = 0.8rem
-    height: w
-    border-radius: w
-    background: $light-blue
-    content: ""
+  // &:before
+  //   position: absolute
+  //   top: t = 0.5rem
+  //   right: t
+  //   width: w = 0.8rem
+  //   height: w
+  //   border-radius: w
+  //   background: $light-blue
+  //   content: ""
 
-  &:after
-    position: absolute
-    top: t = 0.7rem
-    right: t
-    width: w = 0.4rem
-    height: w
-    border-radius: w
-    background: $white
-    content: ""
+  // &:after
+  //   position: absolute
+  //   top: t = 0.7rem
+  //   right: t
+  //   width: w = 0.4rem
+  //   height: w
+  //   border-radius: w
+  //   background: $white
+  //   content: ""
 
   &:hover
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5)
 
   &-meta
-    color: $light-blue
+    color: $dark
     font-weight: bold
 
 .post-qr-code
   text-align: center
-
+  margin-bottom 1rem
   &-item
     display: inline-block
     margin-bottom: 0.8rem
-
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding-top: 0.6rem;
+    margin:1rem
+    &:hover
+      box-shadow:0 14px 68px rgba(0,0,0,0.15), 0 10px 90px rgba(0,0,0,0.12)
+      
   img
-    margin: 0 1rem 0.1rem 1rem
+    margin: 0 0.6rem 0.1rem 0.6rem
     width: w = 10rem
     height: w
 
   &__desc
     color: $grey
+    line-height: 2.6
 
 .post-adv
   margin: 1rem 0

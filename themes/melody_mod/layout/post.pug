@@ -87,6 +87,7 @@ block content
     if (theme.QR_code)
       if (theme.QR_code.length > 0)
         .post-qr-code
+          .reward-wrap 如果这篇文章帮到了你，就请我喝咖啡吧~ ^_^
           each item in theme.QR_code
             .post-qr-code-item
               img.post-qr-code__img(src=(item.itemlist||item).img)

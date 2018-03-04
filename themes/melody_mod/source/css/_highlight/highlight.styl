@@ -16,10 +16,13 @@ figure.highlight
   position: relative
 
 blockquote
-  margin: 0
-  padding: 0 0.6rem
-  border-left: 0.2rem solid $blockquote-padding-color
-  color: $blockquote-color
+  margin: 2rem 0
+  padding: 10px 20px
+  position: relative
+  color: rgba(52, 73, 94, 0.8)
+  background-color: rgba(192, 91, 77, 0.05)
+  border-left: 3px solid rgba(192, 91, 77, 0.3)
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125)
 
 pre,
 code
@@ -77,8 +80,9 @@ pre
     padding-right: 0.5rem
     padding-left: 0.5rem
     background-color: $highlight-vs-dark
-    color: $highlight-gutter.color
     text-align: right
+    .line
+      color: $highlight-gutter.color
 
   .code pre
     padding-right: 0.5rem
@@ -89,7 +93,8 @@ pre
 
   .line
     height: 1rem
-
+    color:#61afef
+    
 .gutter
   -webkit-user-select: none
   -moz-user-select: none

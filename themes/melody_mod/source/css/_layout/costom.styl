@@ -110,6 +110,7 @@ figure.highlight
   position: relative
   padding-top: 1rem
   padding-bottom: 0.5rem
+  border-radius: 5px
   &:hover
     .fa-clipboard
       opacity: 1
@@ -166,3 +167,26 @@ figure.highlight
 
 .fa-clipboard
   z-index 2
+
+#post
+  p,span
+    a
+      color: $light-blue
+      text-decoration: none 
+      &:hover
+        text-decoration: underline
+        color: $blue
+
+#post-content
+  p
+    margin: 0
+    line-height 2
+
+  for value,i in $global-heading
+    h{i}
+      font-weight: bold
+      font-size: value
+
+.reward-wrap
+  font-size: 16px
+  line-height 2
