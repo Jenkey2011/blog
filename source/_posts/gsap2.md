@@ -1,5 +1,5 @@
 ---
-title: '[原创]GreenSock动画教程2 => 一个简单的动画'
+title: GreenSock动画教程2 => 简单动画制作
 date: 2017-05-27 14:00:17
 tags:
   - GreenSock
