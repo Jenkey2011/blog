@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字特效 - 路径</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src='http://tools.people.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js'></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/parallax.js"></script>
+	<script type="text/javascript" src='http://172.31.36.229/res/prefixfree/prefixfree.min.js'></script>
+	<style>
+		body{
+			background:  url('../img/furley_bg.png') 0 0 repeat;	
+		}
+		.panel-body{
+			position: relative;
+			overflow: 	hidden;
+		}
+		svg{
+/* 			border: 2px solid #000; */
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+		  <div class="col-lg-10col-lg-offset-1">
+		  <!-- 拖拽 -->
+		  <style>
+				/* sass */
+				/* HTML, BODY {
+				  height: 100%;
+				}
+
+				$colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
+
+				BODY {
+				  background: hsl(200, 70, 11);
+				  background-size: .12em 100%;
+				  font: 16em/1 Arial;
+				}
+
+				.text--line {
+				  font-size: .5em;
+				}
+
+				svg {
+				  position: absolute;
+				  width: 100%;
+				  height: 100%;
+				}
+
+				$max: 5;
+				$stroke-step: 7%;
+				.text-copy {
+				  fill: none;
+				  stroke: white;
+				  stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
+				  stroke-width: 3px;
+
+				  animation: stroke-offset 9s infinite linear;
+
+				  @for $item from 1 through $max {
+				    $stroke-color: nth($colors, $item);
+
+				    &:nth-child(#{$item}) {
+				      stroke: $stroke-color;
+				      stroke-dashoffset: $stroke-step * $item;
+				    }
+				  }
+				}
+
+				@keyframes stroke-offset {
+				  50% {
+				    stroke-dashoffset: $stroke-step * $max;
+				    stroke-dasharray: 0 $stroke-step * $max*2.5;
+				  }
+				} */
+
+				/* //sass */
+				.panel-body1{
+					background: #082330;
+				}
+				HTML, BODY {
+				  height: 100%;
+				}
+
+				BODY {
+				 background:  url('../img/furley_bg.png') 0 0 repeat;
+				  background-size: .12em 100%;
+				  font: 16em/1 Arial;
+				}
+				
+				.text--line {
+				  font-size: .5em;
+				}
+
+				svg {
+					
+				  width: 100%;
+				  height: 100%;
+				}
+
+				.text-copy {
+				  fill: none;
+				  stroke: white;
+				  stroke-dasharray: 7% 28%;
+				  stroke-width: 3px;
+				  -webkit-animation: stroke-offset 9s infinite linear;
+				          animation: stroke-offset 9s infinite linear;
+				}
+				.text-copy:nth-child(1) {
+				  stroke: #360745;
+				  stroke-dashoffset: 7%;
+				}
+				.text-copy:nth-child(2) {
+				  stroke: #D61C59;
+				  stroke-dashoffset: 14%;
+				}
+				.text-copy:nth-child(3) {
+				  stroke: #E7D84B;
+				  stroke-dashoffset: 21%;
+				}
+				.text-copy:nth-child(4) {
+				  stroke: #EFEAC5;
+				  stroke-dashoffset: 28%;
+				}
+				.text-copy:nth-child(5) {
+				  stroke: #1B8798;
+				  stroke-dashoffset: 35%;
+				}
+
+				@-webkit-keyframes stroke-offset {
+				  50% {
+				    stroke-dashoffset: 35%;
+				    stroke-dasharray: 0 87.5%;
+				  }
+				}
+
+				@keyframes stroke-offset {
+				  50% {
+				    stroke-dashoffset: 35%;
+				    stroke-dasharray: 0 87.5%;
+				  }
+				}
+
+		  </style>
+		  <div class="panel panel-danger">
+		      <div class="panel-heading">
+		        <h3 class="panel-title">文字 - 路径 </h3>
+		      </div>
+		      <div class="panel-body panel-body1">
+				<svg viewBox="0 0 800 600">
+				  <symbol id="s-text">
+				    <text 
+				    	  text-anchor="middle"
+				          x="50%"
+				          y="35%"
+				          class="text--line"
+				          >
+				      人民网
+				    </text>
+				    <text text-anchor="middle"
+				          x="50%"
+				          y="68%"
+				          class="text--line2"
+				          >
+				     people.cn
+				    </text>
+				    
+				  </symbol>
+				  
+				  <g class="g-ants">
+				    <use xlink:href="#s-text"
+				      class="text-copy"></use>     
+				    <use xlink:href="#s-text"
+				      class="text-copy"></use>     
+				    <use xlink:href="#s-text"
+				      class="text-copy"></use>     
+				    <use xlink:href="#s-text"
+				      class="text-copy"></use>     
+				    <use xlink:href="#s-text"
+				      class="text-copy"></use>     
+				  </g>
+				  
+				  
+				</svg>
+		      </div>
+		     
+		  </div>
+		<!-- //描边动画 -->
+		<!-- 写字效果 -->
+		<div class="panel panel-danger">
+		      <div class="panel-heading">
+		        <h3 class="panel-title">文字 - 路径 </h3>
+		      </div>
+		      <div class="panel-body " style="background:none">
+				
+					<svg viewBox="-80 0 400 200">
+						 <path
+       style="fill:none;stroke:#000000;stroke-width:0.26px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 12,94 C 6.8,100 49,83 42,91 31,100 -2.2,110 5.2,110 17,110 44,110 29,99 c -3,-3 -7,31 -7,41 -3,0 -24.6,0 -19.1,0 6.5,-10 52.1,-10 52.1,-10 5,0 -13,-20 2,-20 21,-10 53,-10 43,-11 0,-5 -32,-11 -38,-16 -2,0 -5,-2 -2,-2 0,0 2,59 2,59 -2,0 3,-30 6,-30 0,-10 5,-37 7,-37 3,0 3,18 3,21 0,6 3,46 -3,46 0,0 -7,-30 -7,-30 5,0 -3,20 -3,20 -3,0 10,0 3,0 -6,10 -21,10 -16,10 8,0 16,0 23,0 55,0 -33,-10 -13,20 3,0 37,-30 16,10 0,0 -3,0 -3,10 0,0 6,-20 8,-30 3,-10 11,-67 37,-67 0,0 -42,37 -42,37 5,-10 13,-10 21,-10 11,-10 11,-10 21,-11 30,-8 -20,21 -20,21 0,10 20,-10 20,-10 0,10 -10,40 -10,50 0,0 0,20 0,10 10,-20 20,-30 20,-50 10,0 10,-10 10,-10 0,-10 20,-10 30,-10 0,0 10,-4 10,-1 0,11 -10,11 -10,11 -10,60 0,30 0,30 10,0 20,0 0,0 0,0 -10,-10 -10,-10 -10,0 -10,30 -10,30 0,10 -20,0 -20,0 30,0 70,0 100,0 0,0 80,10 60,10"
+       id="path6545"
+       inkscape:connector-curvature="0" />
+					</svg>
+			
+
+				<input type="button" value="开始" onclick="begin()" style='font-size: 20px'>  
+	
+
+		      </div>
+		     	<script type="text/javascript">
+					var $path = $("path")
+
+					var current_frame,
+						total_frames,
+						path,
+						handdle,
+						pathLen=[];
+					
+					// 初始化
+					var init = function (){
+						current_frame = 0;
+						total_frames = 260;
+						// path.style.strokeDasharray = lenth + " " + lenth
+						// path.style.strokeDashoffset = lenth;
+						$path.each(function(i){
+							var $this = $path[i];
+							var len = Math.floor($this.getTotalLength())
+							pathLen[i] = len;
+							$this.style.strokeDasharray = len + " " + len;
+							$this.style.strokeDashoffset = len + " " + len;
+						})
+						handdle = null;
+					}
+
+					var draw = function(){
+						var progress = current_frame / total_frames;
+						if(progress>1){
+							window.cancelAnimationFrame(handdle)
+						}else{
+							current_frame++
+							$path.each(function(i){
+								var $this = $path[i];
+								$this.style.strokeDashoffset = Math.floor(pathLen[i]*(1 - progress))
+							})
+							handdle = window.requestAnimationFrame(draw)
+						}
+					}
+					var begin = function (){
+						init()
+						draw()
+					}
+
+					begin()
+
+
+		     	</script>
+		  </div>
+		<!-- //写字效果 -->
+
+
+		 <div class="panel panel-danger">
+		      <div class="panel-heading">
+		        <h3 class="panel-title">文字 - 路径 -描边效果</h3>
+		      </div>
+		      <div class="panel-body">	
+		      	<style>
+			.s {
+			  /* fill: #000; */
+			  stroke: #f33;
+			  stroke-width: 2;
+			  stroke-miterlimit: 10;
+			  stroke-dasharray: 100%;
+			  stroke-dashoffset: 0;
+			  animation: stroke-reveal 4s ease infinite;
+			}
+
+			@keyframes stroke-reveal {
+			  from {
+			    stroke-dashoffset: 100%;
+			    fill: rgba(255,255,255,0);
+			    stroke-width: 2;
+			    /* stroke-opacity: 0.6;   */  
+			  }
+			  to {
+			    stroke-dashoffset: 0%;
+			    fill: rgba(255,0,0,1);
+			    stroke-width: 0;
+			  /*   stroke-opacity: 0;     */
+			  }
+			}
+		      	</style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-210 -30 640 120"><defs></defs><title>people</title><path class="s" fill='#f00' d="M73.15,98.67Q49.46,86.3,46.43,59.31q-3.36,26.46-27,40.1-1.67-1.85-2.59-2.84Q40.54,83,43.66,56.9a61.77,61.77,0,0,0,.71-6.57q.19-3.08.19-8.73h3.64q0,1-.09,2.84Q48,48.88,47.82,51q3.76,34.14,27.79,44.51A26.52,26.52,0,0,0,73.15,98.67Z" transform="translate(-16.88 -41.6)"/><path class="s" fill='#f00' d="M141,95.12q-5.89-6.79-8.61-17.74H107.69V95.24q5.86-2.28,15.61-5.86V91.6q0,.86.06,1.51-7.1,2.28-14.53,5.31a22.43,22.43,0,0,0-3.92,1.88l-2.07-2.84a4.59,4.59,0,0,0,1.45-3.79V43.33h48V61.77H133.35a98.32,98.32,0,0,0,1.76,12.43h22.05v3.18H135.88q2.59,9.62,7.46,15.08Q146.62,96.1,149,96q2.53.09,3.49-3.55a87.37,87.37,0,0,0,1.76-9.16,33.46,33.46,0,0,0,3.15,1.14q-.86,5.15-1.94,9.28-1.63,5.74-6.08,6T141,95.12Zm-33.31-48.7V58.66H148.9V46.41Zm24,27.79a120.18,120.18,0,0,1-1.85-12.43H107.69V74.21Z" transform="translate(-16.88 -41.6)"/><path class="s" fill='#f00' d="M187.61,99.53h-3.36V44.25h51.23V91.63q.19,7.43-7.06,7.53l-3.67.09q-.86,0-1.88,0h-2.59a28.93,28.93,0,0,0-.65-3.61q4,.28,7.4.28,5.4.25,5.12-4.75V47.56H187.61Zm3-42.94,2.65-1.45q2,3.27,6,10.15,1,1.6,1.42,2.41a103.84,103.84,0,0,0,5.37-13.32l3.08,1a137.4,137.4,0,0,1-6.63,15.48q3.55,6.08,7,12.25l-3,1.7q-1.2-2.25-3.39-6.29-1.57-2.84-2.28-4.2a149.12,149.12,0,0,1-8.57,14.22q-1.39-1-2.81-1.82a139.53,139.53,0,0,0,9.56-15.67Q195.57,64.8,190.63,56.59ZM210,58.17l2.65-1.39q2.59,4.32,7.13,12.31A123.76,123.76,0,0,0,226,54.8l3,1.14a164.14,164.14,0,0,1-7.37,16.38q2.25,3.89,6.6,11.72.9,1.67,1.36,2.47l-3,1.6L225.46,86q-3.58-6.6-5.64-10.3a145.36,145.36,0,0,1-8.45,13.73,26.94,26.94,0,0,0-2.78-1.85A149.24,149.24,0,0,0,218,72.38Q214.81,66.59,210,58.17Z" transform="translate(-16.88 -41.6)"/></svg>
+		      </div>
+		  </div>
+			
+		  </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		$(function(){
+			setTimeout(function(){
+				// $("#s-text").find('text').text('sldfjsdlfj')
+			},10000)
+		})
+	</script>
+</body>
+</html>

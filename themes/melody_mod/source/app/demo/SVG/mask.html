@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>svg蒙版</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js'></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .panel-body {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .text1 svg {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    .text1 svg text {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .text1 svg rect {
+      fill: white;
+    }
+
+    /* .text1 svg>rect {
+      -webkit-mask: url(#mask);
+      mask: url(#mask);
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10col-lg-offset-1">
+        <!-- img -->
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">SVG蒙版</h3>
+          </div>
+          <div class="panel-body text1">
+            <img src="https://i.loli.net/2018/03/06/5a9dffbe69750.png" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <mask id="mask" x="0" y="0" width="100%" height="100%">
+                  <rect x="0" y="0" width="100%" height="100%" />
+                  <text x="80" y="90">wangqizheng</text>
+                </mask>
+              </defs>
+              <rect x="0" y="0" width="648" height="100%" mask="url(#mask)" />
+            </svg>
+          </div>
+        </div>
+        <!-- //img -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

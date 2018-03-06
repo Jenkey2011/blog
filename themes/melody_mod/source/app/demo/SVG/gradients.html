@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>文本&渐变</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js'></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10col-lg-offset-1">
+
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">文字 - 渐变 - 线性渐变 </h3>
+          </div>
+          <div class="panel-body" style='background: #ffffff;'>
+            <style>
+              body {
+
+                background-size: cover;
+                text-align: center;
+              }
+
+              #wrapper {
+                width: 690px;
+                margin: 0 auto;
+                padding-top: 30px;
+              }
+
+              svg#gradient {
+                width: 100%;
+                height: 100px;
+                font-size: 60px;
+              }
+
+              svg#gradient text {
+                fill: url(#linearGradient);
+              }
+            </style>
+            <!-- 线性渐变 -->
+            <div id="wrapper">
+              <svg id="gradient">
+                <defs>
+                  <linearGradient id="linearGradient">
+                    <stop offset="0%" stop-color="#15bcce" />
+                    <stop offset="50%" stop-color="#fccf26" />
+                    <stop offset="100%" stop-color="#f24949" />
+                  </linearGradient>
+                </defs>
+                <text y="75%" x='50%' fill-opacity="0.5" fill="url(#linearGradient)" text-anchor="middle">线性渐变</text>
+              </svg>
+            </div>
+            <!-- //线性渐变 -->
+
+            <!-- 径向渐变 -->
+            <style>
+              .contain {
+                margin: auto;
+                text-align: center;
+                max-width: 850px;
+                padding-bottom: 50px;
+              }
+
+              .contain text {
+                font-size: 60px;
+                font-family: 'Signika', sans-serif;
+              }
+
+              .contain .p {
+                text-align: center;
+                font-family: Arial, sans-serif;
+              }
+            </style>
+            <div class="contain">
+              <svg width="750px" height="100px">
+                <defs>
+                  <radialGradient id="Gradient1" cy="60%" fx="45%" fy="45%" r="2">
+                    <stop offset="0%" class="flash" stop-color="green" />
+
+                    <stop offset="50%" class="flash2" style="animation-delay: 1.5s" stop-color="blue" />
+
+                    <stop class="100%" class="flash" stop-color="red" />
+                  </radialGradient>
+                </defs>
+                <text y="75%" x='50%' text-anchor="middle" fill="url(#Gradient1)">径向渐变 </text>
+              </svg>
+            </div>
+
+            <!-- //径向渐变 -->
+
+          </div>
+        </div>
+
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">文字 - 渐变 - 流光 </h3>
+          </div>
+          <div class="panel-body" style='background: #555;padding:100px 0px;'>
+
+            <style>
+              body {
+
+                font: 14.5em/1 Open Sans, Impact;
+                text-transform: uppercase;
+                margin: 0;
+              }
+
+              svg {
+                /*   position: absolute; */
+                width: 100%;
+                height: 100%;
+              }
+            </style>
+            <svg viewBox="0 0 600 300">
+
+              <!-- 渐变 -->
+              <radialGradient id="gr-radial" cx="50%" cy="50%" r="70%">
+                <!-- 渐变末 -->
+                <animate attributeName="r" values="0%;150%;100%;0%" dur="5s" repeatCount="indefinite" />
+                <!-- 渐变尾 -->
+                <stop stop-color="#FFF" offset="0">
+                  <animate attributeName="stop-color" values="#333;#FFF;#FFF;#333" dur="5s" repeatCount="indefinite" />
+                </stop>
+                <stop stop-color="rgba(55,55,55,0)" offset="100%" />
+              </radialGradient>
+
+              <!-- 文字 -->
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text" fill="url(#gr-radial)">
+                BLOG
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

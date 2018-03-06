@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>文字路径
+    <textPath>
+  </title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js'></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .panel-body {
+      position: relative;
+      overflow: hidden;
+    }
+
+    svg {
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10col-lg-offset-1">
+        <!-- 拖拽 -->
+        <style>
+          #drag {
+            border: 1px solid #333;
+            display: block;
+            margin: 0 auto;
+          }
+
+          #drag path,
+          #drag line {
+            stroke: dodgerblue;
+            stroke-width: 2;
+          }
+
+          #drag circle {
+            fill: dodgerblue;
+            cursor: move;
+          }
+
+          #drag text {
+            font-size: 30px;
+            fill: #f33;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+          }
+        </style>
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">文字 - 路径 </h3>
+          </div>
+          <div class="panel-body">
+            <svg id="drag" width="900" height="450" viewBox="0 0 900 450">
+              <defs>
+                <path id="path" d="M51,158Q193,358 397,226Q601,94 845,263" fill="transparent" stroke-width="1"></path>
+              </defs>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path"></use>
+
+              <text stroke="none" font-size="26">
+                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path" startOffset="10%">
+                  王其征的网络日志 wangqizheng.win
+                </textPath>
+              </text>
+
+              <circle cx="51" cy="158" r="6" class="M"></circle>
+              <circle cx="193" cy="358" r="6" class="Q"></circle>
+              <circle cx="397" cy="226" r="6" class=" "></circle>
+              <circle cx="601" cy="94" r="6" class="Q"></circle>
+              <circle cx="845" cy="263" r="6" class=" "></circle>
+              <line x1="193" y1="358" x2="601" y2="94"></line>
+            </svg>
+          </div>
+          <script type="text/javascript">
+            var svg = document.querySelector('svg')
+            var path = document.querySelector('#path')
+            var line = document.querySelector('line')
+            var circles = document.querySelectorAll('circle')
+            var cry = []
+            for (var i = 0; i < circles.length; i++) {
+              var o = {}
+              o.x = Number(circles[i].getAttribute('cx'))
+              o.y = Number(circles[i].getAttribute('cy'))
+              o.class = circles[i].getAttribute('class')
+              o.history = {
+                x: o.x,
+                y: o.y
+              }
+              cry.push(o)
+            }
+            var dragging = false
+            var index
+            var m = {
+              x: 0,
+              y: 0
+            }
+            svg.addEventListener(
+              'mousedown',
+              function (evt) {
+                if (evt.target.tagName == 'circle') {
+                  dragging = evt.target
+                }
+              },
+              false
+            )
+
+            svg.addEventListener(
+              'mouseleave',
+              function (evt) {
+                dragging = false
+              },
+              false
+            )
+
+            svg.addEventListener(
+              'mousemove',
+              function (evt) {
+                if (dragging) {
+                  m = oMousePos(svg, evt)
+                  dragging.setAttributeNS(null, 'cx', m.x)
+                  dragging.setAttributeNS(null, 'cy', m.y)
+                  var dPath = ''
+
+                  for (var i = 0; i < circles.length; i++) {
+                    cry[i].history.x = cry[i].x
+                    cry[i].history.y = cry[i].y
+                    cry[i].x = Number(circles[i].getAttribute('cx'))
+                    cry[i].y = Number(circles[i].getAttribute('cy'))
+                    if (circles[i] == dragging) {
+                      index = i
+                    }
+                  }
+
+                  if (index == 1) {
+                    // 第一个控制点
+                    var dx1 = cry[1].x - cry[2].x
+                    var dy1 = cry[1].y - cry[2].y
+                    cry[3].x = cry[2].x - dx1
+                    cry[3].y = cry[2].y - dy1
+                  } else if (index == 2) {
+                    //中间的控制点
+                    var dx2 = m.x - cry[2].history.x
+                    console.log(dx2)
+                    var dy2 = m.y - cry[2].history.y
+                    cry[1].x = cry[1].x + dx2
+                    cry[1].y = cry[1].y + dy2
+                    cry[3].x = cry[3].x + dx2
+                    cry[3].y = cry[3].y + dy2
+                  } else if (index == 3) {
+                    // 第二个控制点
+                    var dx3 = cry[3].x - cry[2].x
+                    var dy3 = cry[3].y - cry[2].y
+                    cry[1].x = cry[2].x - dx3
+                    cry[1].y = cry[2].y - dy3
+                  }
+
+                  for (var i = 0; i < circles.length; i++) {
+                    dPath += cry[i].class + cry[i].x + ',' + cry[i].y
+                    circles[i].setAttributeNS(null, 'cx', cry[i].x)
+                    circles[i].setAttributeNS(null, 'cy', cry[i].y)
+                  }
+
+                  path.setAttributeNS(null, 'd', dPath)
+                  line.setAttributeNS(null, 'x1', cry[1].x)
+                  line.setAttributeNS(null, 'y1', cry[1].y)
+                  line.setAttributeNS(null, 'x2', cry[3].x)
+                  line.setAttributeNS(null, 'y2', cry[3].y)
+                }
+              },
+              false
+            )
+
+            svg.addEventListener(
+              'mouseup',
+              function (evt) {
+                dragging = false
+              },
+              false
+            )
+
+            function oMousePos(elmt, evt) {
+              var ClientRect = elmt.getBoundingClientRect()
+              return {
+                x: Math.round(evt.clientX - ClientRect.left),
+                y: Math.round(evt.clientY - ClientRect.top)
+              }
+            }
+          </script>
+        </div>
+        <!-- //拖拽 -->
+
+        <!-- 动画 -->
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">文字 - 路径 - 动画</h3>
+          </div>
+          <div class="panel-body">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259.72 68.86">
+              <defs>
+
+                <path id="myPath" class='a' d="M.5,115.5c44.9-39.21,77.13-44,99-40,36.49,6.63,49.27,38.5,83,40,31.32,1.39,58.32-24.41,77-48"
+                  transform="translate(3 -50)" stroke="red" stroke-width="2" />
+              </defs>
+
+              <use xlink:href="#MyPath" fill="none" stroke="red" />
+              <path id="myPath1" fill='none' d="M.5,115.5c44.9-39.21,77.13-44,99-40,36.49,6.63,49.27,38.5,83,40,31.32,1.39,58.32-24.41,77-48"
+                transform="translate(3 -50)" stroke="red" stroke-width="0.5" />
+              <text font-size="14">
+                <textPath xlink:href="#myPath" startOffset="10%">
+                  王其征的网络日志 wangqizheng.win
+                </textPath>
+              </text>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259.72 68.86">
+              <defs>
+                <path id="myPath" class='a' d="M.5,115.5c44.9-39.21,77.13-44,99-40,36.49,6.63,49.27,38.5,83,40,31.32,1.39,58.32-24.41,77-48"
+                  transform="translate(3 -50)" stroke="red" stroke-width="2" />
+              </defs>
+
+              <use xlink:href="#MyPath" fill="none" stroke="red" />
+              <path id="myPath1" fill='none' d="M.5,115.5c44.9-39.21,77.13-44,99-40,36.49,6.63,49.27,38.5,83,40,31.32,1.39,58.32-24.41,77-48"
+                transform="translate(3 -50)" stroke="red" stroke-width="0.5" />
+              <text font-size="14">
+                <textPath id="textpath" xlink:href="#myPath" startOffset="0%">
+                  王其征的网络日志 wangqizheng.win
+                  <animate xlink:href="#textpath" attributeName="startOffset" from="-100%" to="100%" dur="15s" repeatCount="indefinite" />
+                </textPath>
+              </text>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180">
+
+              <defs>
+                <!-- <path id="myPath" class='a' d="M.5,115.5c44.9-39.21,77.13-44,99-40,36.49,6.63,49.27,38.5,83,40,31.32,1.39,58.32-24.41,77-48" transform="translate(3 -50)" stroke="red" stroke-width="2" /> -->
+                <path id="myPath2" d="M80 40 A 50 50 0 0 1 180 140  A 50 50 0 0 1 80 40" fill="none" stroke="#000" />
+              </defs>
+              <path d="M80 40 A 50 50 0 0 1 180 140  A 50 50 0 0 1 80 40" fill="none" stroke="#000" />
+              <text font-size="14" fill="#f33">
+                <textPath id="textpath2" xlink:href="#myPath2" startOffset="0%">
+                  王其征的网络日志 wangqizheng.win
+                  <animate xlink:href="#textpath2" attributeName="startOffset" from="100%" to="0%" dur="10s" repeatCount="indefinite" />
+                </textPath>
+              </text>
+            </svg>
+
+          </div>
+        </div>
+        <!-- //动画 -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

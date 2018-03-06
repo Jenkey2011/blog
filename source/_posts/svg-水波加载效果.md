@@ -94,7 +94,7 @@ categories:
 
 ![](/app/assets/images/2017/05/rectgif3.gif)
 
-```javascript
+```js
 document.addEventListener('DOMContentLoaded', function() {
   var twm = TweenMax
   var water = document.querySelector('.water-fill')
