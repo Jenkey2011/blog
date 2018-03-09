@@ -1,7 +1,11 @@
 ---
 title: SVG学习#day3 —— 文本与渐变
-date: 2018-03-06 14:39:37
+date: 2017-07-11 14:39:37
 tags:
+  - SVG
+  - 学习
+categories:
+  - demo
 ---
 
 > 本博客关于 SVG 的系列文章不是教程，只是在学习的时候，练练手的同时，展示一下小 demo，同事加强一下学习效果。想深入学习的同学，可以去[MDN SVG 教程](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)

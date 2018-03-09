@@ -2,6 +2,10 @@
 title: SVG学习#day2 —— 文字路径(textPath)的应用
 date: 2017-07-09 13:34:56
 tags:
+  - SVG
+  - 学习
+categories:
+  - demo
 ---
 
 > 本博客关于 SVG 的系列文章不是教程，只是在学习的时候，练练手的同时，展示一下小 demo，同事加强一下学习效果。想深入学习的同学，可以去[MDN SVG 教程](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)

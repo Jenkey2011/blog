@@ -155,8 +155,7 @@ figure.highlight
     background: $black!important
 
 #post-content
-  p
-    line-height 1.6
+
   code 
     padding: 3px 5px;
     border-radius: 4px;
@@ -179,13 +178,16 @@ figure.highlight
 
 #post-content
   p
-    margin: 0
-    line-height 2
+    line-height 1.6
+    margin-bottom: 16px;
+    margin-top: 0
+    
 
   for value,i in $global-heading
     h{i}
       font-weight: bold
       font-size: value
+      margin-top 1rem
       &::before
         font-weight: bold
         font-size: value
