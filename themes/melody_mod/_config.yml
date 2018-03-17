@@ -88,7 +88,7 @@ fireworks: false
 
 # Analysis
 # ---------------
-baidu_analytics: 5b1f88a8b8504af6901cc5ae78130e0c
+baidu_analytics: 4a3a3bea01c3af5ce786875cc72e0ff6
 
 google_analytics:
 
@@ -225,7 +225,7 @@ busuanzi:
   site_pv: true
   site_pv_header: 本站总访问量
   site_pv_footer:
-  # custom pv span for one page only
+  # custom pv span for one page only  
   page_pv: true
   page_pv_header: 本文总阅读量
   page_pv_footer:

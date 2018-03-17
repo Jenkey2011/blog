@@ -8,9 +8,7 @@ categories:
   - demo
 ---
 
-最近有个策划是模仿微信跳一跳，找领导要的一周，想不到一天不到就完成了
-
-麻雀虽小五脏俱全，其实细节还是很多的。先看看 demo 吧，后期上线后直接贴代码
+最近有个策划是模仿微信跳一跳,麻雀虽小五脏俱全，其实细节还是很多的。先看看 demo 吧，后期上线后直接贴代码
 
 按住蓄力，松开弹跳，还有对应音乐哦~
 <video id='video2' webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false"
