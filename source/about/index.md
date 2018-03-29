@@ -4,10 +4,6 @@ date: 2018-02-26 19:59:28
 type: "about"
 ---
 
-<!-- * 期望职位：前端开发工程师
-* 期望薪资：20k
-* 期望城市：北京 -->
-
 前端工程师 - 王其征 - 18612663164
 
 ## 个人信息
@@ -19,7 +15,7 @@ type: "about"
 * Email：jenkey2011@gmail.com
 * 技术博客：http://wangqizheng.win/
 * Github：https://github.com/jenkey2011
-* 求职： 北京 / 18k
+  <!-- * 求职： 北京 / 18k -->
 * 状态： 在职 / 一月内到岗
 
 ---
