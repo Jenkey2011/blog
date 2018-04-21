@@ -80,3 +80,6 @@ deploy:
   type: git
   repo: git@github.com:jenkey2011/jenkey2011.github.io.git
   branch: master
+
+marked: 
+  gfm: true
