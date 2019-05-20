@@ -73,7 +73,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: melody_mod
-theme: indigo
+theme: indigo_mod
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
