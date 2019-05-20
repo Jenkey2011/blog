@@ -72,7 +72,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: melody_mod
+# theme: melody_mod
+theme: indigo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
